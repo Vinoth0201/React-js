@@ -1,1 +1,14 @@
-
+import React, { createContext, useContext } from "react";
+const MyContext = createContext("Hello from Context");
+function ContextExample() {
+  return (
+    <MyContext.Provider value="Hello from Context">
+      <Child />
+    </MyContext.Provider>
+  );
+}
+function Child() {
+  const message = useContext(MyContext);
+  return <h2>{message}</h2>;
+}
+export default ContextExample;
