@@ -1,1 +1,15 @@
-
+import React from "react";
+import { useState } from "react";
+export default function StateExample() {
+  const [user, setUser] = useState("Vinoth");
+  const ChangeName = () => {
+    setUser("Kumar");
+    console.log(user);
+  };
+  return (
+    <>
+      <h3>{user}</h3>
+      <button onClick={ChangeName}>Change Name</button>
+    </>
+  );
+}
