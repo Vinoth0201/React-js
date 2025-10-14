@@ -1,1 +1,15 @@
-
+import React, { useMemo } from 'react';
+function MemoExample() {
+  const number = 5;
+  const squared = useMemo(() => {
+    console.log('Calculating square...');
+    return number * number;
+  }, [number]);
+  return (
+    <div>
+      <h2>Number: {number}</h2>
+      <h2>Square: {squared}</h2>
+    </div>
+  );
+}
+export default MemoExample;
