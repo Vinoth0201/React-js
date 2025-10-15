@@ -1,1 +1,12 @@
-
+import React, { useCallback } from "react";
+function CallbackExample() {
+  const sayHello = useCallback(() => {
+    alert("Hello from useCallback");
+  }, []);
+  return (
+    <div>
+      <button onClick={sayHello}>Click Me</button>
+    </div>
+  );
+}
+export default CallbackExample;
