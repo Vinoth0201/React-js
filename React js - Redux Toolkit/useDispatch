@@ -1,1 +1,15 @@
-
+import React from 'react';
+import { useDispatch } from 'react-redux';
+import { increment, decrement, addAmount } from './counterSlice';
+function Counter() {
+  const dispatch = useDispatch();
+  return (
+    <div style={{ textAlign: 'center' }}>
+      <h2>Click buttons to change counter</h2>
+      <button onClick={() => dispatch(decrement())}>- Decrease</button>
+      <button onClick={() => dispatch(increment())}>+ Increase</button>
+      <button onClick={() => dispatch(addAmount(5))}>Add 5</button>
+    </div>
+  );
+}
+export default Counter;
