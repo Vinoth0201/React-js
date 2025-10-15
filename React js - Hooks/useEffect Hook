@@ -1,1 +1,12 @@
-
+import React, { useEffect } from "react";
+function EffectExample() {
+  useEffect(() => {
+    alert("Component rendered");
+  }, []);
+  return (
+    <div>
+      <h1>Hello from useEffect!</h1>
+    </div>
+  );
+}
+export default EffectExample;
